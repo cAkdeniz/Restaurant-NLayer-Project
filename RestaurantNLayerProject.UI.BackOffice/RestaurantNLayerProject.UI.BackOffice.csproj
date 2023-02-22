@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7848BB4E-4725-46FE-90AE-A3D90DB71876}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RestaurantNLayerProject.UI.BackOffice</RootNamespace>
+    <AssemblyName>RestaurantNLayerProject.UI.BackOffice</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Control.Draggable, Version=1.0.5049.269, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Control.Draggable.1.0.5049.269\lib\net35-Client\Control.Draggable.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.XtraBars.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="RestaurantNLayerProject.UserControls">
+      <HintPath>..\RestaurantNLayerProject.UserControls\obj\Debug\RestaurantNLayerProject.UserControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaMenu\FrmAnaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaMenu\FrmAnaMenu.Designer.cs">
+      <DependentUpon>FrmAnaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fotograf\FrmImageEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fotograf\FrmImageEditor.Designer.cs">
+      <DependentUpon>FrmImageEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fotograf\FrmKamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fotograf\FrmKamera.Designer.cs">
+      <DependentUpon>FrmKamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masa\FrmMasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masa\FrmMasa.Designer.cs">
+      <DependentUpon>FrmMasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masa\FrmMasaIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masa\FrmMasaIslem.Designer.cs">
+      <DependentUpon>FrmMasaIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Musteri\FrmMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Musteri\FrmMusteri.Designer.cs">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Musteri\FrmMusteriIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Musteri\FrmMusteriIslem.Designer.cs">
+      <DependentUpon>FrmMusteriIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tanim\FrmTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanim\FrmTanim.Designer.cs">
+      <DependentUpon>FrmTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urun\FrmUrun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urun\FrmUrun.Designer.cs">
+      <DependentUpon>FrmUrun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urun\FrmUrunIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urun\FrmUrunIslem.Designer.cs">
+      <DependentUpon>FrmUrunIslem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnaMenu\FrmAnaMenu.resx">
+      <DependentUpon>FrmAnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fotograf\FrmImageEditor.resx">
+      <DependentUpon>FrmImageEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fotograf\FrmKamera.resx">
+      <DependentUpon>FrmKamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masa\FrmMasa.resx">
+      <DependentUpon>FrmMasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masa\FrmMasaIslem.resx">
+      <DependentUpon>FrmMasaIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Musteri\FrmMusteri.resx">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Musteri\FrmMusteriIslem.resx">
+      <DependentUpon>FrmMusteriIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tanim\FrmTanim.resx">
+      <DependentUpon>FrmTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urun\FrmUrun.resx">
+      <DependentUpon>FrmUrun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urun\FrmUrunIslem.resx">
+      <DependentUpon>FrmUrunIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantNLayerProject.Business\RestaurantNLayerProject.Business.csproj">
+      <Project>{AF3F2090-B13A-4043-9B32-1A313D37AD53}</Project>
+      <Name>RestaurantNLayerProject.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantNLayerProject.Core\RestaurantNLayerProject.Core.csproj">
+      <Project>{A088B926-53C4-4EAE-B340-80877B7EA0D9}</Project>
+      <Name>RestaurantNLayerProject.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantNLayerProject.Entities\RestaurantNLayerProject.Entities.csproj">
+      <Project>{02e664a0-4d59-4603-8549-20c111312115}</Project>
+      <Name>RestaurantNLayerProject.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

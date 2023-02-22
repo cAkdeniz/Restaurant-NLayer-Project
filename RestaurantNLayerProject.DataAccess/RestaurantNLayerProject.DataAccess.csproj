@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CAC6F958-2EAC-4049-A33F-271D8181717A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RestaurantNLayerProject.DataAccess</RootNamespace>
+    <AssemblyName>RestaurantNLayerProject.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contexts\Base\BaseContext.cs" />
+    <Compile Include="Contexts\Restaurant\RestaurantConfiguration.cs" />
+    <Compile Include="Contexts\Restaurant\RestaurantContext.cs" />
+    <Compile Include="Functions\EntityBaseInfo.cs" />
+    <Compile Include="IRepositories\IAdisyonDal.cs" />
+    <Compile Include="IRepositories\IAdresDal.cs" />
+    <Compile Include="IRepositories\IEkMalzemeHareketDal.cs" />
+    <Compile Include="IRepositories\IGarsonDal.cs" />
+    <Compile Include="IRepositories\IMasaDal.cs" />
+    <Compile Include="IRepositories\IMusteriDal.cs" />
+    <Compile Include="IRepositories\ITelefonDal.cs" />
+    <Compile Include="IRepositories\IUrunHareketDal.cs" />
+    <Compile Include="Mappings\AdisyonMap.cs" />
+    <Compile Include="Mappings\AdresMap.cs" />
+    <Compile Include="Mappings\EkMalzemeHareketMap.cs" />
+    <Compile Include="Mappings\EkMalzemeMap.cs" />
+    <Compile Include="Mappings\GarsonMap.cs" />
+    <Compile Include="Mappings\MasaMap.cs" />
+    <Compile Include="Mappings\MusteriMap.cs" />
+    <Compile Include="Mappings\PorsiyonMap.cs" />
+    <Compile Include="Mappings\TanimMap.cs" />
+    <Compile Include="Mappings\TelefonMap.cs" />
+    <Compile Include="Mappings\UrunHareketMap.cs" />
+    <Compile Include="Mappings\UrunMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IRepositories\Base\IRepository.cs" />
+    <Compile Include="IRepositories\IEkMalzemeDal.cs" />
+    <Compile Include="IRepositories\IPorsiyonDal.cs" />
+    <Compile Include="IRepositories\ITanimDal.cs" />
+    <Compile Include="IRepositories\IUrunDal.cs" />
+    <Compile Include="Repositories\AdisyonDal.cs" />
+    <Compile Include="Repositories\AdresDal.cs" />
+    <Compile Include="Repositories\Base\Repository.cs" />
+    <Compile Include="Repositories\EkMalzemeDal.cs" />
+    <Compile Include="Repositories\EkMalzemeHareketDal.cs" />
+    <Compile Include="Repositories\GarsonDal.cs" />
+    <Compile Include="Repositories\MasaDal.cs" />
+    <Compile Include="Repositories\MusteriDal.cs" />
+    <Compile Include="Repositories\PorsiyonDal.cs" />
+    <Compile Include="Repositories\TanimDal.cs" />
+    <Compile Include="Repositories\TelefonDal.cs" />
+    <Compile Include="Repositories\UrunDal.cs" />
+    <Compile Include="Repositories\UrunHareketDal.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\RestaurantUnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantNLayerProject.Core\RestaurantNLayerProject.Core.csproj">
+      <Project>{A088B926-53C4-4EAE-B340-80877B7EA0D9}</Project>
+      <Name>RestaurantNLayerProject.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantNLayerProject.Entities\RestaurantNLayerProject.Entities.csproj">
+      <Project>{02e664a0-4d59-4603-8549-20c111312115}</Project>
+      <Name>RestaurantNLayerProject.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>
